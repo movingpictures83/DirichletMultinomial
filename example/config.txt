@@ -1,0 +1,2 @@
+Prefix plugins/DirichletMultinomial/example/
+Plugin DirichletMultinomial inputfile filtered.rds outputfile fitted
