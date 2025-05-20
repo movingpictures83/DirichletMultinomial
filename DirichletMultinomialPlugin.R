@@ -13,6 +13,7 @@ output <- function(outputfile) {
 design_full <- model.matrix(~ group, data = samples(myD))
 myD <<- dmPrecision(myD, design = design_full)
 pdf(paste(outputfile,"pdf",sep="."))
+write.csv(myD@mean_expression, paste(outputfile, "csv", sep="."))
 library(ggplot2)
 ggp <- plotPrecision(myD)
 ggp + geom_point(size = 4)
